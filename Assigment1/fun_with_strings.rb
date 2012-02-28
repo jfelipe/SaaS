@@ -7,7 +7,7 @@ def palindrome?(string)
 end
 
 def count_words(string)
-  words = string.gsub((/\b\W*/), " ").downcase.split(" ")
+  words = string.downcase.split(/\b\W*/)
   hash = Hash.new(0)
   words.each do |word|
     hash[word] += 1
