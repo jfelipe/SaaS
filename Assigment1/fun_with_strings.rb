@@ -3,7 +3,7 @@
 def palindrome?(string)
   str1 = string.gsub(/(\W|\b)+/, "").downcase
   str2 = str1.reverse
-  return true ? str1 == str2 : false
+  str1 == str2
 end
 
 def count_words(string)
