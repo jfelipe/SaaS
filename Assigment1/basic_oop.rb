@@ -26,7 +26,7 @@ class JellyBean < Dessert
   end
 
   def delicious?
-    return false if flavor == "black licoric"
+    return false if flavor == "black licorice"
     true
   end
 
