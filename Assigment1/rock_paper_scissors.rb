@@ -40,3 +40,14 @@ def rps_tournament_winner(game)
   end
 end
 
+
+game = [
+              [
+               [ ["Armando", "P"], ["Dave", "S"]],
+               [ ["Richard", "R"], ["Michael", "S"]]
+              ],
+              [
+               [ ["Allen", "S"], ["Omer", "P"]],
+               [ ["David E.", "R"], ["Richard X", "P"]]
+              ]
+             ]
