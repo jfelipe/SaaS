@@ -27,5 +27,16 @@ def rps_game_winner(game)
   game.last    
 end
 
-#To.do tournament
+def rps_tournament_winner(game)
+  if game.first.first.is_a?(Array)
+      group1  = rps_tournament_winner(game.first)
+      group2 = rps_tournament_winner(game.last)
+      #puts "group1 = #{group1}....."
+      #puts "group2 = #{group2}....."      
+      rps_tournament_winner([group1, group2])
+  else
+    #puts "Llegue #{game}"
+    return rps_game_winner(game)
+  end
+end
 
