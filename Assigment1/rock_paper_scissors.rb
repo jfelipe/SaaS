@@ -1,3 +1,5 @@
+#Assigment1 rock_paper_scissors - Juan Felipe Arango - 
+
 class WrongNumberOfPlayersError < StandardError ; end
 class NoSuchStrategyError < StandardError ; end
 
@@ -19,7 +21,9 @@ def rps_game_winner(game)
   raise WrongNumberOfPlayersError unless game.length == 2
   raise NoSuchStrategyError unless valid_strategy?(move1) and valid_strategy?(move2)  
     
-  return game.first if winner?(move1,move2)
+  if winner?(move1,move2)
+    return game.first 
+  end
   game.last    
 end
 
