@@ -9,7 +9,7 @@ class Class
     code = <<-CODE
           def #{attr_name}=(val)
            @#{attr_name} = val
-           @#{attr_name}_history = [nil] if @#{attr_name}_history.nil?
+           @#{attr_name}_history ||= [nil]
            @#{attr_name}_history.push(val)
           end
         CODE
