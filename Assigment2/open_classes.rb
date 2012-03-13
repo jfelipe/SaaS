@@ -20,10 +20,6 @@ class Numeric
     end
 
 end
-  
-p 5.euros.in(:euros)
-p 8.euros.in(:rupees)
-p 8.euros
 
 class String
 
@@ -35,4 +31,10 @@ class String
     
 end
 
+module Enumerable
+  def palindrome?
+    elements = self.map{|element| element}
+    elements == elements.reverse
+  end
+end
 
